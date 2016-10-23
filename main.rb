@@ -13,3 +13,4 @@ puts "Phrase: #{post}"
 
 api = Koala::Facebook::API.new(FB_APP_TOKEN)
 # api.put_wall_post(post)
+
