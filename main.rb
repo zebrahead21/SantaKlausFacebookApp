@@ -4,13 +4,13 @@ require_relative './lib/markov.rb'
 
 markov = Markov.new
 
-texts = File.read('./samples/sample_2').force_encoding("utf-8")
+texts = File.read('./samples/sample_1').force_encoding("utf-8")
 
 markov.feed(texts)
 markov.normalize!
-post = markov.generate_phrase(", ")
+post = markov.generate_phrase()
 
-puts "Phrase: #{post}"
+puts post
 
 api = Koala::Facebook::API.new(FB_APP_TOKEN)
 # api.put_wall_post(post)
