@@ -7,6 +7,7 @@ markov = Markov.new
 texts = File.read('./samples/sample_2').force_encoding("utf-8")
 
 markov.feed(texts)
+markov.normalize!
 post = markov.generate_phrase(", ")
 
 puts "Phrase: #{post}"
